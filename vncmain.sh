@@ -8,7 +8,7 @@ xcompmgr &
 #Disable All Lxpanel Error MSG
 lxpanel > /dev/null 2>&1 &
 echo "[IkvmDaemon] Starting Ikvm ...."
-/usr/java/jdk1.8.0_231/bin/javaws -Xnosplash /app/launch.jnlp
+/usr/java/jdk1.7.0_80/bin/javaws -Xnosplash /app/launch.jnlp
 echo "[IkvmDaemon] Started Ikvm ."
 while true; do
     jnlpexist=$(ps -e | grep java)
@@ -16,7 +16,7 @@ while true; do
 		echo "[IkvmDaemon] Ikvm exited. It will start after 3 seconds ..."
 		sleep 3
 		echo "[IkvmDaemon] Starting Ikvm ...."
-		/usr/java/jdk1.8.0_231/bin/javaws -Xnosplash /app/launch.jnlp
+		/usr/java/jdk1.7.0_80/bin/javaws -Xnosplash /app/launch.jnlp
 		echo "[IkvmDaemon] Started Ikvm ."
                 sleep 2
     else
